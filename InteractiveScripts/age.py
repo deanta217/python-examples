@@ -4,7 +4,13 @@ year = datetime.datetime.now().year
 #this sets the year variable to the current year.
 while True:
     #this is a forever loop.
-    birthyear = input("What year were you born?\n")
+    while True:
+        birthyear = input("What year were you born?\n")
+        try:
+            birth = float(birthyear)
+            break
+        except ValueError:
+            print("Please enter a number.")
     if int(birthyear) > int(year):
         #this part make sure the birth year is greater than the current year.
         print("Incorrect Birth Year!\nThe current year is", year, "and you entered {}!".format(birthyear))
