@@ -14,7 +14,8 @@ while True:
             break
         elif convertmore.upper() == "N":
            print("Goodbye.")
-           quit()
+           break
            #ends program
         else:
            print("Enter Y or N.\n")
+    break
