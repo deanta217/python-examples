@@ -1,4 +1,4 @@
-import datetime
+import datetime, sys
 #this imports the datetime module so we can get the current year
 year = datetime.datetime.now().year
 #this sets the year variable to the current year.
