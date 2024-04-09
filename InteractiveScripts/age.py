@@ -8,8 +8,11 @@ while True:
         birthyear = input("What year were you born?\n")
         try:
             birth = float(birthyear)
+            #this attempts to convert it to a number
+            #if it suceeds it will run this code
             break
         except ValueError:
+            #if it fails, it will run this code
             print("Please enter a number.")
     if int(birthyear) > int(year):
         #this part make sure the birth year is greater than the current year.
