@@ -26,4 +26,7 @@ while True:
 age = int(year)-int(birthyear)
 #this subtracts the year from the birthyear.
 #the int() function is used to turn it from a string to a integer.
-print("You are", age, "years old!")
+if age < 130:
+    print("You are", age, "years old!")
+else:
+    print("You are", age, "years old. (no you're not)")
