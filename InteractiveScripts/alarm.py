@@ -13,32 +13,37 @@ clear_screen()
 #alarm config#
 while True:
     while True:
-        hours = int(input("How many hours?\n"))
-        if hours > 0:
-            break
-        else:
+        hours = input("How many hours?\n")
+        if not hours.isdigit():
             clear_screen()
-            rprint("[yellow]You cannot have negative hours!")
+            rprint("[yellow]You must enter a digit!")
             continue
+        else:
+            break
     clear_screen()
     while True:
-        minutes = int(input("How many minutess\n"))
-        if minutes > 0:
-            break
-        else:
+        minutes = input("How many minutes\n")
+        if not minutes.isdigit():
             clear_screen()
-            rprint("[yellow]You cannot have negative minutes!")
+            rprint("[yellow]You must enter a digit!")
             continue
+        else:
+            break
     clear_screen()
     while True:
-        seconds = int(input("How many seconds?"))
-        if seconds > 0:
-            break
-        else:
+        seconds = input("How many seconds?")
+        if not seconds.isdigit():
             clear_screen()
-            rprint("[yellow]You cannot have negative seconds!")
-            continue        
-    if hours + minutes + seconds == 0:
+            rprint("[yellow]You must enter a digit!")
+            continue
+        else:
+            break
+    if int(hours) + int(minutes) + int(seconds) == 0:
         rprint("[yellow]A timer must be at minimum 1 second.")
-
+        continue
+    else:
+        print("Timer is >= 1 second! Good")
+        break
+clear_screen
+hour_int = int(hour)
 playsound.playsound("/Users/deant/repos/python-examples/InteractiveScripts/alarm/alarm.mp3")
