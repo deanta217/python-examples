@@ -1,3 +1,4 @@
+#to run this you must download the entire repository.
 import rich, os
 from rich import print as rprint
 def clear_screen():
