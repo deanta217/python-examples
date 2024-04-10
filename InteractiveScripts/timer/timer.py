@@ -1,5 +1,5 @@
 #setup#
-import os, rich, playsound
+import os, rich, playsound, time
 from rich import print as rprint
 #functions#
 def clear_screen():
@@ -31,7 +31,7 @@ while True:
             break
     clear_screen()
     while True:
-        seconds = input("How many seconds?")
+        seconds = input("How many seconds?\n")
         if not seconds.isdigit():
             clear_screen()
             rprint("[yellow]You must enter a digit!")
@@ -45,5 +45,31 @@ while True:
         print("Timer is >= 1 second! Good")
         break
 clear_screen
-hour_int = int(hour)
-playsound.playsound("/Users/deant/repos/python-examples/InteractiveScripts/alarm/alarm.mp3")
+hour_int = int(hours)
+minute_int = int(minutes)
+second_int = int(seconds)
+while True:
+    print(str(hour_int) + ":" + str(minute_int) + ":" + str(second_int))
+    time.sleep(1)
+    second_int=second_int-1
+    if second_int == -1:
+        second_int = 59
+        minute_int = minute_int-1
+        if minute_int == -1:
+            minute_int = 59
+            hour_int = hour_int-1
+            if hour_int == -1:
+                hour_int = 0
+                minute_int = 0
+                second_int = 0
+                break
+    clear_screen()
+clear_screen()
+print("Timer Done")
+playsound.playsound("/Users/deant/repos/python-examples/InteractiveScripts/timer/timer.mp3")
+clear_screen()
+while True:
+    time.sleep(0.5)
+    print("Timer Done")
+    time.sleep(0.5)
+    clear_screen()
