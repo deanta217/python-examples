@@ -10,7 +10,7 @@ while True:
     #converts input to decimal. 2 represents the base.
     print("Your decimal is {}".format(decimal))
     while True:
-        rprint("[yellow]If this is running through the launcher, this doesn't work. I am currently looking for a fix.")
+        #rprint("[yellow]If this is running through the launcher, this doesn't work. I am currently looking for a fix.")
         convertmore = input("Would you like to convert another binary string? (Y/N)\n")
         if convertmore.upper() == "Y":
             break
