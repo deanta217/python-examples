@@ -5,3 +5,6 @@ Prerequisites
 - OS
 - Playsound
 - SYS
+- Keyring
+- Yagmail
+- Requests
