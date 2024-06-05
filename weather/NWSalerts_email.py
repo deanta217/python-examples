@@ -139,10 +139,9 @@ while True:
     while True:
         keep = input("Would you like to check alerts for other states? (y/n)\n")
         if keep.upper() == "Y":
-            continue
+            break
         elif keep.upper() == "N":
             rprint("[blue]Thanks for using!")
-            break
+            exit()
         else:
             rprint("[red]Please enter Y or N.")
-    break
