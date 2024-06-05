@@ -136,11 +136,13 @@ while True:
     print(title)
     print(total)
     yag.send(to=receiver, contents=title + "\n\n" + total, subject="Important Weather Update")
-    keep = input("Would you like to check alerts for other states? (y/n)")
-    if keep.upper() == "Y":
-        continue
-    elif keep.upper() == "N":
-        rprint("[blue]Thanks for using!")
-        break
-    else:
-        rprint("[red]Please enter Y or N.")
+    while True:
+        keep = input("Would you like to check alerts for other states? (y/n)\n")
+        if keep.upper() == "Y":
+            continue
+        elif keep.upper() == "N":
+            rprint("[blue]Thanks for using!")
+            break
+        else:
+            rprint("[red]Please enter Y or N.")
+    break
